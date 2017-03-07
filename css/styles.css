@@ -1,0 +1,29 @@
+* {
+	text-align: center;
+}
+
+#user-input-1{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+
+}
+
+#user-input-2{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+
+}
+
+.dropdown-item{
+	text-decoration: none;
+}
+
+.dropdown{
+	display: inline;
+}
+
+#battle-container{
+	margin-top: 5%;
+}
