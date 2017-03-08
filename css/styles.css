@@ -27,3 +27,17 @@
 #battle-container{
 	margin-top: 5%;
 }
+
+.robot-image{
+
+}
+
+.robot-container{
+	display: flex;
+	flex-direction: row;
+}
+
+img{
+	max-height: 540px;
+
+}

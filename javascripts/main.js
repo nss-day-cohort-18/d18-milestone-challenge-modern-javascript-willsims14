@@ -17,28 +17,27 @@ var robot2 = null;
 
 // For Each Robot, append it to the dropdown choices
 for(var i = 0; i < robotVals.length; i++){
-	let robotElement1 = `<li class="dropdown-choice1">${robotVals[i].model}</li>`;
-	let robotElement2 = `<li class="dropdown-choice2">${robotVals[i].model}</li>`;
+	let robotElement1 = `<li class="dropdown-choice1" id="${robotVals[i].id}">${robotVals[i].model}</li>`;
+	let robotElement2 = `<li class="dropdown-choice2" id="${robotVals[i].id}">${robotVals[i].model}</li>`;
 	$("#drop1").append(robotElement1);
 	$("#drop2").append(robotElement2);
 }
 
 
-
-
-
 let extractChosenRobots = function(event){
+	var newImage, key;
 	if(event.currentTarget.parentNode.id === 'drop1'){
-		robot1 = event.target.innerHTML;
-		var newImage = "";
-		console.log("Robot1: ", robot1);
-		console.log("New Image: ", newImage);
+		key =  'my' + event.target.id;
+		newImage = myRobotsObj[key].img;
+		$("#robot-image-1").attr("src", newImage);
+		$("#robot-image-1").show();
 	}
 
 	if(event.currentTarget.parentNode.id === 'drop2'){
-		robot2 = event.target.innerHTML;
-		// set image
-		console.log("Robot2: ", robot2);
+		key = 'my' + event.target.id;
+		newImage = myRobotsObj[key].img;
+		$("#robot-image-2").attr("src", newImage);
+		$("#robot-image-2").show();
 	}
 };
 
@@ -61,9 +60,10 @@ $(".dropdown-choice2").click(extractChosenRobots);
 
 // Event listener for dropdown
 
-/* 	- OnClickDropdown
-		* selectedRobot1 = thatRobot1; 
-		* selectedRobot2 = thatRobot2;
+/* 	
+	- OnUserNamesBotClick()
+		* Change input box to label.
+
 	- OnClickSubmit
 		* Calculate Health
 			* Robot 1

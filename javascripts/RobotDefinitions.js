@@ -48,6 +48,7 @@ var Robot = function(){
 				// Drone ****************************************
 				var SolarDrone = function(){
 					this.model = "Solar Drone";
+					this.id = "SolarDrone";
 					this.img = 'img/solar_drone.png';
 					this.healthRange = {"min": 80,"max":120};
 					this.damageRange = {"min":100,"max":140};
@@ -57,6 +58,7 @@ var Robot = function(){
 
 				var MicroDrone = function(){
 					this.model = "Micro Drone";
+					this.id = "MicroDrone";
 					this.img = 'img/micro_drone.png';
 					this.healthRange = {"min": 70,"max":110};
 					this.damageRange = {"min":100,"max":160};
@@ -67,6 +69,7 @@ var Robot = function(){
 				// Android ****************************************
 				var HunkOfMetal = function(){
 					this.model = "Hunk Of Metal";
+					this.id = "HunkOfMetal";
 					this.img = 'img/metal.png';
 					this.healthRange = {"min": 100,"max":150};
 					this.damageRange = {"min":80,"max":110};
@@ -76,6 +79,7 @@ var Robot = function(){
 
 				var SentientKillingMachine = function(){
 					this.model = "Sentient Killing Machine";
+					this.id = "SentientKillingMachine";
 					this.img = "img/sentient_killing_machine.png";
 					this.healthRange = {"min": 80,"max":140};
 					this.damageRange = {"min":110,"max":140};
@@ -85,7 +89,8 @@ var Robot = function(){
 
 				// MiniatureTank ****************************************
 				var MiniPanzer = function(){
-					this.model = "Mini Panzer";
+					this.model = "Panzer";
+					this.id = "MiniPanzer";
 					this.img = 'img/panzer.png';
 					this.healthRange = {"min": 160,"max":200};
 					this.damageRange = {"min":  60,"max":120};
@@ -95,6 +100,7 @@ var Robot = function(){
 
 				var BigBoy = function(){
 					this.model = "Big Boy";
+					this.id = "BigBoy";
 					this.img = 'img/big_boy.png';
 					this.healthRange = {"min": 150,"max":220};
 					this.damageRange = {"min":  50,"max":110};
@@ -137,9 +143,9 @@ mySentientKillingMachine.health = getRandomInRange(mySentientKillingMachine.heal
 // myRobots.push(mySentientKillingMachine);
 
 // Mini Tanks
-let myPanzer = new MiniPanzer();
-myPanzer.damage = getRandomInRange(myPanzer.damageRange.min, myPanzer.damageRange.max);
-myPanzer.health = getRandomInRange(myPanzer.healthRange.min, myPanzer.healthRange.max);
+let myMiniPanzer = new MiniPanzer();
+myMiniPanzer.damage = getRandomInRange(myMiniPanzer.damageRange.min, myMiniPanzer.damageRange.max);
+myMiniPanzer.health = getRandomInRange(myMiniPanzer.healthRange.min, myMiniPanzer.healthRange.max);
 // myRobots.push(myPanzer);
 
 let myBigBoy = new BigBoy();
@@ -152,7 +158,7 @@ let myRobots = {
 	myMicroDrone,
 	myHunkOfMetal,
 	mySentientKillingMachine,
-	myPanzer,
+	myMiniPanzer,
 	myBigBoy
 };
 
